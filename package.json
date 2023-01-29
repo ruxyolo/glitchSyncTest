@@ -8,10 +8,8 @@
   },
   "scripts": {
     "build": "ncc build index.js",
-    "release": "npx conventional-changelog-cli -i CHANGELOG.md -s",
-    "pretest": "eslint . && prettier -c . && npx alex .",
-    "test": "jest --coverage",
-    "version": "npm run build && npm run release && git add CHANGELOG.md dist/index.js"
+    "version": "npm run build && npm run release && git add CHANGELOG.md dist/index.js",
+    "start": "index.js"
   },
   "repository": {
     "type": "git",
