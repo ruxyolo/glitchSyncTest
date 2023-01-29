@@ -9,7 +9,7 @@
   "scripts": {
     "build": "ncc build index.js",
     "version": "npm run build && npm run release && git add CHANGELOG.md dist/index.js",
-    "start": "index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
