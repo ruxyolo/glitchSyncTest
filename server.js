@@ -16,9 +16,9 @@ function githubSync(req, res) {
   let sig  = `sha1=${hmac.update(JSON.stringify(req.body)).digest('hex')}`;
   
   if (req.headers['x-github-event'] == 'push' && sig === req.headers['x-hub-signature']) {
-    cmd.run('chmod 777 -R /git.sh');
+    cmd.run('chmod 777 -R ./git.sh');
     
-    cmd.run('/git.sh', (err, data) => {
+    cmd.run('./git.sh', (err, data) => {
       if (err) {
         console.warn('Error when trying to sync with github!')
         console.log(err)   
