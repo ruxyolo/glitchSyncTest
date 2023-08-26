@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const crypto = require('crypto');
 const cmd = require('node-cmd');
 var server;
-const port = 7515;
+const port = 7515; //A nice number
 
 app.use(express.json());
 app.use(express.static("public"));
